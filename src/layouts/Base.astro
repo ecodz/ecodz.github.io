@@ -1,0 +1,62 @@
+---
+import "../styles/xterm.css"
+import Header from "../components/Header.svelte"
+export interface Props {
+	title?: string;
+}
+
+let { title } = Astro.props;
+
+if (title) {
+    title += " | E-Codz' Website"
+} else {
+    title = "E-Codz' Website"
+}
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+        <meta name="description" content="E-Codz' Personal Website">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=inter:300,500,700" rel="stylesheet" />
+		<title>{title}</title>
+	</head>
+	<body>
+        <Header client:only></Header>
+        <main>
+		    <slot />
+        </main>
+	</body>
+</html>
+<style is:global>
+    html {
+        font-family: 'Inter', sans-serif;
+        background-color: hsl(240, 23%, 9%);
+        --color: hsl(226, 64%, 88%);
+        color: var(--color);
+    }
+
+    body {
+        margin: 0;
+    }
+
+    a {
+        color: hsl(217, 92%, 76%);
+    }
+
+    main {
+        max-width: 800px;
+        margin: auto;
+        padding: 27px;
+    }
+
+    .nonlink {
+        color: hsl(226, 64%, 88%);
+        text-decoration: none;
+    }
+</style>
