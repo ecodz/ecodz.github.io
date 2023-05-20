@@ -1,0 +1,41 @@
+<header>
+    <a href="/" class="nonlink">
+        <div>
+            <img src="/img/me.svg" alt="Website Icon">
+            <p>E-Codz' Website</p>
+        </div>
+    </a>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/links">Links</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style lang="scss">
+    header {
+        max-width: 800px;
+        margin: auto;
+        padding: 27px;
+    }
+
+    header, ul, div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+    }
+
+    ul {
+        list-style-type: none;
+        gap: 16px;
+    }
+
+    img {
+        max-height: 2em;
+        border-radius: 50%;
+    }
+</style>

@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.svelte"
+import HeaderFallback from "../components/HeaderFallback.astro";
 export interface Props {
 	title?: string;
 }
@@ -30,6 +31,7 @@ if (title) {
 	</head>
 	<body>
         <Header client:only></Header>
+        <noscript><HeaderFallback /></noscript>
         <main>
 		    <slot />
         </main>
