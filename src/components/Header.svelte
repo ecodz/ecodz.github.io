@@ -105,6 +105,10 @@ export const useMediaQuery = (mediaQueryString)=>{
             bottom: 0;
             width: 100%;
             box-sizing: border-box;
+            background-color: var(--bg);
+        }
+        body {
+            margin-bottom: 3em;
         }
     }
 </style>

@@ -38,13 +38,15 @@ if (title) {
 <style is:global>
     html {
         font-family: 'Inter', sans-serif;
-        background-color: hsl(240, 23%, 9%);
+        --bg: hsl(240, 23%, 9%);
+        background-color: var(--bg);
         --color: hsl(226, 64%, 88%);
         color: var(--color);
     }
 
     body {
         margin: 0;
+        margin-bottom: 8em;
     }
 
     a {
@@ -58,7 +60,7 @@ if (title) {
     }
 
     .nonlink {
-        color: hsl(226, 64%, 88%);
+        color: var(--color);
         text-decoration: none;
     }
 </style>
